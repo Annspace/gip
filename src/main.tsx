@@ -1,12 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import GlobalFonts from './fonts.styles.ts';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import App from "./App.tsx";
+import GlobalFonts from "./fonts.styles.ts";
+
+import "./index.css";
+import { NextUIProvider } from "@nextui-org/react";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <GlobalFonts />
-    <App />
+    <NextUIProvider>
+      <GlobalFonts />
+      <App />
+    </NextUIProvider>
   </React.StrictMode>,
-)
+);
